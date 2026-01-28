@@ -18,7 +18,8 @@ import KelasXIIIPage from "./pages/KelasXIIIPage";
 import NotFound from "./pages/NotFound";
 import BeritaPage from "./pages/BeritaPage";
 import { LoginForm } from "./pages/loginForm";
-import AllPendaftran from "./pages/allPendaftran";
+import DetailPendaftaran from "./pages/DetailPendaftaran";
+import AllPendaftaran from "./pages/AllPendaftaran";
 
 const queryClient = new QueryClient();
 
@@ -83,7 +84,15 @@ const AppContent = () => (
           path="/pendaftaran-siswa"
           element={
             <AdminLayout>
-              <AllPendaftran />
+              <AllPendaftaran/>
+            </AdminLayout>
+          }
+        />
+          <Route
+          path="/admin/pendaftaran/:id"
+          element={
+            <AdminLayout>
+              <DetailPendaftaran/>
             </AdminLayout>
           }
         />
